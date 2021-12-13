@@ -39,16 +39,16 @@ class Queue:
         else:
             IndexError('A fila está vazia')
 
+    """Mostrando o tamanho da fila"""
+    def __len__(self):
+        return self._count
+        
     """Retorna o topo sem remover"""
     def peek(self):
         if self._count > 0:
             elem = self.first.data
             return elem
-        raise IndexError("A fila está vazia")
-
-    """Mostrando o tamanho da fila"""
-    def __len__(self):
-        return self._count
+        raise IndexError("A fila está vazia") 
     
     """Representando o objeto"""
     def __repr__(self):
